@@ -17,6 +17,7 @@ public class CombinationController {
     @RequestMapping(value = "/combination", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody
     public List<String> getCombinations(@RequestBody InputObject inputObj) {
+        // Get input.
         String input = inputObj.getContent();
         for (char c : input.toCharArray()) {
             if (!Character.isDigit(c) && !Character.isLetter(c)) {
